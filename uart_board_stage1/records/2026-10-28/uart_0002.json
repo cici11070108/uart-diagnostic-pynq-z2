@@ -1,0 +1,23 @@
+{
+  "configuration": {
+    "baud": 115200,
+    "data_bits": 8,
+    "parity": "none",
+    "stop_bits": 1,
+    "io_voltage": "3.3V",
+    "pl_clock_hz": 100000000
+  },
+  "event_count": 0,
+  "valid_byte_count": 0,
+  "framing_error_count": 0,
+  "session_overflow_seen": false,
+  "fifo_remaining": 0,
+  "fifo_remaining_last_known": 0,
+  "fifo_snapshot_at_utc": "2025-05-03T17:29:00.022446+00:00",
+  "hardware_error": false,
+  "session_started_at_utc": "2025-05-03T17:28:59.219169+00:00",
+  "exported_at_utc": "2025-05-03T17:29:00.026286+00:00",
+  "hardware_timestamps": false,
+  "timestamp_note": "时间仅为Python主机操作时间；没有FPGA接收时间戳。",
+  "csv_file": "uart_0002.csv"
+}

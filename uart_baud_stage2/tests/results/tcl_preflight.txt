@@ -1,0 +1,16 @@
+Tcl 8.6 offline parser and guarded preflight checks, 2026-10-28
+Executed after final script corrections. These use a modeled Vivado API,
+not real Vivado. They do not establish implementation or timing success.
+
+PASS: real Tcl 8.6 parser compiled both scripts and CDC statements
+PASS: no_project stopped before archive/design changes
+PASS: wrong_part stopped before archive/design changes
+PASS: already_upgraded stopped before archive/design changes
+PASS: extra_port stopped before archive/design changes
+PASS: wrong_clock stopped before archive/design changes
+PASS: extra_connection stopped before archive/design changes
+PASS: wrong_width stopped before archive/design changes
+UART_BAUD: Creating a full source archive before any block replacement: /tmp/uart_baud_preflight_2_1793160394842673/C:/Users/cici/Desktop/FPGA/uart_baud_stage2/backups/pynq_uart_before_baud_20261028_130634.zip
+PASS: modeled valid baseline saves existing BD then reaches archive before design replacement
+PASS: these are Tcl/stub checks only; real Vivado build and board validation remain required
+

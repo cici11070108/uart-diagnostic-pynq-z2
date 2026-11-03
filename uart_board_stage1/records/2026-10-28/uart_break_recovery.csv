@@ -1,0 +1,4 @@
+﻿index,data_hex,data_valid,framing_error,overflow_seen
+1,,0,1,0
+2,55,1,0,0
+3,AA,1,0,0

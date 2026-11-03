@@ -1,0 +1,27 @@
+软件审查与提交副本变更清单
+
+采用 board/04_uart_baud_panel.ipynb 作为干净运行入口；export/20261029_203751 同步。
+records/2026-10-31/04_uart_baud_panel.ipynb 作为实测证据保留原样，不当作 Run All 运行入口。
+
+修改内容：
+1. 两份运行 Notebook 新增 file_download_link：读取已导出的 CSV/JSON，生成 data URI + download 文件名；不依赖服务器 /files/ 路径和 Notebook 所在层级。
+2. 文件仍写到笔记本目录内 panel_exports；单文件原始大小超过1MiB时保留文件列表下载提示，避免意外大链接。
+3. 更新下载说明；运行 Notebook 全部执行计数为空、输出为空。
+4. tests/test_uart_diag_baud.py 增加3项下载回归检查；现有19项保留，合计22项通过。
+
+最大10000事件检查：{"records": 10000, "csv_bytes": 279019, "json_bytes": 1064, "csv_data_url_chars": 372065, "json_data_url_chars": 1457, "combined_link_html_bytes": 373676, "inline_raw_file_cap_bytes": 1048576}
+此改动不修改 RTL、XDC、驱动、Windows发送脚本或实测记录。不需要重新生成硬件bitstream。
+未执行实际PYNQ/Chrome点击测试；离线校验链接内容与磁盘文件逐字相同，容量低于文档浏览器上限。
+未见审查范围内的真实姓名、密码/API token字面量；存在cici用户名路径示例。
+最终打包需统一重算 SHA256SUMS。
+
+修改文件：
+uart_baud_stage2/board/04_uart_baud_panel.ipynb
+原始 SHA256: 7641c8e81995d7df37c80b1c15fd29565599e27d78930eb275e54973dc6cfdad
+提交 SHA256: c51e6a6cb315e400a907cc13eef554bcafc9ce2da901cd8723a6fea98c5e3035
+uart_baud_stage2/export/20261029_203751/04_uart_baud_panel.ipynb
+原始 SHA256: 7641c8e81995d7df37c80b1c15fd29565599e27d78930eb275e54973dc6cfdad
+提交 SHA256: c51e6a6cb315e400a907cc13eef554bcafc9ce2da901cd8723a6fea98c5e3035
+uart_baud_stage2/tests/test_uart_diag_baud.py
+原始 SHA256: 2d5ff262d725dbbcc3d789b322169048c7cc15efe7d5d3a529afcd6c9882fefb
+提交 SHA256: 68c9813b7ebf6c076f1cba1c494a80aa4ad7c45f8718638c1f1d5a755b938afc

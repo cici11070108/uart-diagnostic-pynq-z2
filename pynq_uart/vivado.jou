@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Wed Oct 28 08:50:50 2026
+# Process ID: 45856
+# Current directory: C:/Users/cici/Desktop/FPGA/pynq_uart
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent53444 C:\Users\cici\Desktop\FPGA\pynq_uart\pynq_uart.xpr
+# Log file: C:/Users/cici/Desktop/FPGA/pynq_uart/vivado.log
+# Journal file: C:/Users/cici/Desktop/FPGA/pynq_uart\vivado.jou
+# Running On: cici-legion, OS: Windows, CPU Frequency: 3264 MHz, CPU Physical cores: 18, Host memory: 33752 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/cici/Desktop/FPGA/pynq_uart/pynq_uart.xpr
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 9
+wait_on_run impl_1
+open_bd_design {C:/Users/cici/Desktop/FPGA/pynq_uart/pynq_uart.srcs/sources_1/bd/uart_system/uart_system.bd}
+open_run impl_1
+source {C:/Users/cici/Desktop/FPGA/uart_board_stage1/vivado/02_export_overlay.tcl}
+open_bd_design {C:/Users/cici/Desktop/FPGA/pynq_uart/pynq_uart.srcs/sources_1/bd/uart_system/uart_system.bd}

@@ -1,0 +1,27 @@
+test_full_10000_record_download_size_is_bounded (test_uart_diag_baud.DownloadLinkTests.test_full_10000_record_download_size_is_bounded) ... ok
+test_nested_notebook_downloads_exact_csv_and_json_bytes (test_uart_diag_baud.DownloadLinkTests.test_nested_notebook_downloads_exact_csv_and_json_bytes) ... ok
+test_unexpected_oversized_export_keeps_a_file_list_fallback (test_uart_diag_baud.DownloadLinkTests.test_unexpected_oversized_export_keeps_a_file_list_fallback) ... ok
+test_ack_without_correct_baud_rejected (test_uart_diag_baud.DriverTests.test_ack_without_correct_baud_rejected) ... ok
+test_all_six_rates_readback_and_ack (test_uart_diag_baud.DriverTests.test_all_six_rates_readback_and_ack) ... ok
+test_break_invalid_data_and_csv_rate (test_uart_diag_baud.DriverTests.test_break_invalid_data_and_csv_rate) ... ok
+test_clear_preserves_baud_and_resets_index_overflow (test_uart_diag_baud.DriverTests.test_clear_preserves_baud_and_resets_index_overflow) ... ok
+test_external_rate_change_detected_before_pop (test_uart_diag_baud.DriverTests.test_external_rate_change_detected_before_pop) ... ok
+test_parameter_validation_before_write (test_uart_diag_baud.DriverTests.test_parameter_validation_before_write) ... ok
+test_reject_old_or_bad_image_without_writes (test_uart_diag_baud.DriverTests.test_reject_old_or_bad_image_without_writes) ... ok
+test_timeout_blocks_uncertain_retry (test_uart_diag_baud.DriverTests.test_timeout_blocks_uncertain_retry) ... ok
+test_unread_data_prevents_baud_switch (test_uart_diag_baud.DriverTests.test_unread_data_prevents_baud_switch) ... ok
+test_break_check_and_unique_exports_late_overflow (test_uart_diag_baud.PanelTests.test_break_check_and_unique_exports_late_overflow) ... ok
+test_failed_save_never_clears_or_changes_baud (test_uart_diag_baud.PanelTests.test_failed_save_never_clears_or_changes_baud) ... ok
+test_limits_and_detach (test_uart_diag_baud.PanelTests.test_limits_and_detach) ... ok
+test_rate_change_auto_saves_old_configuration_first (test_uart_diag_baud.PanelTests.test_rate_change_auto_saves_old_configuration_first) ... ok
+test_read_partial_failure_keeps_confirmed_events (test_uart_diag_baud.PanelTests.test_read_partial_failure_keeps_confirmed_events) ... ok
+test_startup_guard_and_python36_syntax (test_uart_diag_baud.PanelTests.test_startup_guard_and_python36_syntax) ... ok
+test_switch_completion_unknown_keeps_old_record_config (test_uart_diag_baud.PanelTests.test_switch_completion_unknown_keeps_old_record_config) ... ok
+test_unread_events_block_config_and_table_escapes_html (test_uart_diag_baud.PanelTests.test_unread_events_block_config_and_table_escapes_html) ... ok
+test_bad_args_do_not_open_serial (test_uart_diag_baud.SenderTests.test_bad_args_do_not_open_serial) ... ok
+test_ramp_and_break_payload_and_serial_configuration (test_uart_diag_baud.SenderTests.test_ramp_and_break_payload_and_serial_configuration) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.059s
+
+OK

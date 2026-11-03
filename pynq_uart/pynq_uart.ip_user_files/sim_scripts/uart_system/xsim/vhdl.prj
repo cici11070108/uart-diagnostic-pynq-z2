@@ -1,0 +1,6 @@
+vhdl xil_defaultlib  \
+"../../../bd/uart_system/ip/uart_system_proc_sys_reset_0_0/sim/uart_system_proc_sys_reset_0_0.vhd" \
+"../../../bd/uart_system/ip/uart_system_axi_gpio_diag_0/sim/uart_system_axi_gpio_diag_0.vhd" \
+
+# Do not sort compile order
+nosort

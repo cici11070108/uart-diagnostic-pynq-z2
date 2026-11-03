@@ -1,0 +1,560 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Tue Oct 27 22:56:03 2026
+# Process ID: 14900
+# Current directory: C:/Users/cici/Desktop/FPGA/pynq_uart
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14616 C:\Users\cici\Desktop\FPGA\pynq_uart\pynq_uart.xpr
+# Log file: C:/Users/cici/Desktop/FPGA/pynq_uart/vivado.log
+# Journal file: C:/Users/cici/Desktop/FPGA/pynq_uart\vivado.jou
+# Running On: cici-legion, OS: Windows, CPU Frequency: 3264 MHz, CPU Physical cores: 18, Host memory: 33752 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/cici/Desktop/FPGA/pynq_uart/pynq_uart.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.4/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.5/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.2 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.1 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.0 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_mpsoc/1.0/board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.0 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.1 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.1 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.2 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.1 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.1 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.1/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.2 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.0 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.1 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.1/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc706/1.4/board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.3/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.4/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at E:/vivado/2023vivado/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/vivado/2023vivado/Vivado/2023.2/data/ip'.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 1500.992 ; gain = 378.512
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 27 22:57:06 2026...
+rt.tcl}
+# namespace eval uart_stage1 {
+#     proc fail {message} {
+#         error "UART_STAGE1: $message"
+#     }
+# 
+#     proc one {objects description} {
+#         if {[llength $objects] != 1} {
+#             fail "Expected one $description; found [llength $objects]. Stop and send the complete Tcl error."
+#         }
+#         return [lindex $objects 0]
+#     }
+# 
+#     proc pin {name} {
+#         return [one [get_bd_pins -quiet $name] "BD pin $name"]
+#     }
+# 
+#     proc same_net {first second} {
+#         set a [get_bd_nets -quiet -of_objects [pin $first]]
+#         set b [get_bd_nets -quiet -of_objects [pin $second]]
+#         if {[llength $a] != 1 || [llength $b] != 1 || $a ne $b} {
+#             fail "Existing connection must be $first -> $second. Existing wires were not changed."
+#         }
+#     }
+# 
+#     proc unattached_pin {name} {
+#         if {[llength [get_bd_nets -quiet -of_objects [pin $name]]] != 0} {
+#             fail "$name already has a wire. This script will not replace existing connections."
+#         }
+#     }
+# 
+#     proc run {script_dir} {
+#         if {[llength [get_projects -quiet]] != 1} {
+#             fail "Open the existing pynq_uart.xpr project first."
+#         }
+#         set project [current_project]
+#         set part [get_property PART $project]
+#         if {![string equal -nocase $part "xc7z020clg400-1"]} {
+#             fail "Expected PYNQ-Z2 part xc7z020clg400-1, but project uses $part."
+#         }
+# 
+#         set bd_file [one [get_files -quiet */uart_system.bd] "uart_system.bd file"]
+#         open_bd_design $bd_file
+#         current_bd_instance /
+# 
+#         foreach name {processing_system7_0 uart_rx_0 proc_sys_reset_0 xlconstant_0} {
+#             one [get_bd_cells -quiet $name] "existing block $name"
+#         }
+#         foreach name {uart_event_fifo_0 axi_gpio_diag axi_interconnect_diag} {
+#             if {[llength [get_bd_cells -quiet $name]] != 0} {
+#                 fail "$name already exists. The add-on was already run or partly added. Do not run it twice; send the current diagram and Tcl output."
+#             }
+#         }
+#         if {[llength [get_bd_ports -quiet uart_rx_i]] != 0} {
+#             fail "An external port uart_rx_i already exists. It was not changed."
+#         }
+# 
+#         set root [file normalize [file join $script_dir ..]]
+#         set fifo_rtl [file join $root rtl uart_event_fifo.v]
+#         set rx_xdc [file join $root constraints uart_rx_pmoda.xdc]
+#         set cdc_xdc [file join $root constraints uart_rx_cdc.xdc]
+#         foreach path [list $fifo_rtl $rx_xdc $cdc_xdc] {
+#             if {![file isfile $path]} {
+#                 fail "Missing package file: $path . Extract the entire ZIP before running this script."
+#             }
+#         }
+# 
+#         set receiver [get_bd_cells uart_rx_0]
+#         set divisor [get_property CONFIG.CLKS_PER_BIT $receiver]
+#         if {$divisor ne "868"} {
+#             fail "Existing uart_rx_0 CLKS_PER_BIT is '$divisor', expected 868. No parameters were overwritten."
+#         }
+#         set ps [get_bd_cells processing_system7_0]
+#         set frequency [get_property CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ $ps]
+#         if {![string is double -strict $frequency] || abs($frequency - 100.0) > 0.001} {
+#             fail "Existing FCLK_CLK0 frequency is '$frequency' MHz, expected 100 MHz. No clock settings were changed."
+#         }
+# 
+#         same_net processing_system7_0/FCLK_CLK0 uart_rx_0/clk
+#         same_net processing_system7_0/FCLK_CLK0 processing_system7_0/M_AXI_GP0_ACLK
+#         same_net processing_system7_0/FCLK_CLK0 proc_sys_reset_0/slowest_sync_clk
+#         same_net processing_system7_0/FCLK_RESET0_N proc_sys_reset_0/ext_reset_in
+#         same_net proc_sys_reset_0/peripheral_reset uart_rx_0/rst
+#         same_net xlconstant_0/dout proc_sys_reset_0/dcm_locked
+#         if {[get_property CONFIG.CONST_VAL [get_bd_cells xlconstant_0]] ne "1"} {
+#             fail "xlconstant_0 driving dcm_locked must be 1. Existing constant was not changed."
+#         }
+#         foreach name {rx data_out valid framing_error} {
+#             unattached_pin uart_rx_0/$name
+#         }
+#         set ps_axi [one [get_bd_intf_pins -quiet processing_system7_0/M_AXI_GP0] "PS M_AXI_GP0"]
+#         if {[llength [get_bd_intf_nets -quiet -of_objects $ps_axi]] != 0} {
+#             fail "PS M_AXI_GP0 is already connected. This script will not replace an existing AXI system."
+#         }
+#         foreach ip {xilinx.com:ip:axi_gpio:2.0 xilinx.com:ip:axi_interconnect:2.1} {
+#             if {[llength [get_ipdefs -quiet $ip]] == 0} {
+#                 fail "Required IP $ip is unavailable in this Vivado installation."
+#             }
+#         }
+# 
+#         # Fix receiver metadata before adding blocks, so a read-only property
+#         # cannot leave an otherwise half-created AXI system behind.
+#         # Actual uart_rx RTL uses "if (rst)": this is metadata, not an inverter.
+#         set rst_pin [pin uart_rx_0/rst]
+#         if {[lsearch -exact [list_property $rst_pin] CONFIG.POLARITY] >= 0} {
+#             if {[catch {set_property CONFIG.POLARITY ACTIVE_HIGH $rst_pin} reason]} {
+#                 fail "Cannot set the existing UART rst metadata ACTIVE_HIGH. No new blocks were added. Add the ACTIVE_HIGH reset interface attribute to uart_rx.v, refresh the RTL module, then run again. Details: $reason"
+#             }
+#         }
+# 
+#         puts "UART_STAGE1: preflight passed (100 MHz, divisor 868). Adding the receive buffer and PS access."
+#         if {[llength [get_files -quiet $fifo_rtl]] == 0} {
+#             add_files -fileset sources_1 -norecurse $fifo_rtl
+#         }
+#         update_compile_order -fileset sources_1
+#         create_bd_cell -type module -reference uart_event_fifo uart_event_fifo_0
+# 
+#         create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_diag
+#         set_property -dict [list \
+#             CONFIG.C_IS_DUAL {1} \
+#             CONFIG.C_GPIO_WIDTH {32} \
+#             CONFIG.C_ALL_INPUTS {1} \
+#             CONFIG.C_ALL_OUTPUTS {0} \
+#             CONFIG.C_GPIO2_WIDTH {32} \
+#             CONFIG.C_ALL_INPUTS_2 {0} \
+#             CONFIG.C_ALL_OUTPUTS_2 {1} \
+#             CONFIG.C_DOUT_DEFAULT_2 {0x00000000} \
+#             CONFIG.C_INTERRUPT_PRESENT {0}] [get_bd_cells axi_gpio_diag]
+# 
+#         create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 axi_interconnect_diag
+#         set_property -dict [list CONFIG.NUM_SI {1} CONFIG.NUM_MI {1}] [get_bd_cells axi_interconnect_diag]
+#         connect_bd_intf_net $ps_axi [get_bd_intf_pins axi_interconnect_diag/S00_AXI]
+#         connect_bd_intf_net [get_bd_intf_pins axi_interconnect_diag/M00_AXI] [get_bd_intf_pins axi_gpio_diag/S_AXI]
+# 
+#         # All new logic shares the existing FCLK_CLK0 domain.
+#         foreach target {
+#             uart_event_fifo_0/clk
+#             axi_gpio_diag/s_axi_aclk
+#             axi_interconnect_diag/ACLK
+#             axi_interconnect_diag/S00_ACLK
+#             axi_interconnect_diag/M00_ACLK
+#         } {
+#             connect_bd_net [pin processing_system7_0/FCLK_CLK0] [pin $target]
+#         }
+# 
+#         # RTL uses active-HIGH reset; AXI IP uses active-LOW reset.
+#         connect_bd_net [pin proc_sys_reset_0/peripheral_reset] [pin uart_event_fifo_0/rst]
+#         foreach target {
+#             axi_gpio_diag/s_axi_aresetn
+#             axi_interconnect_diag/S00_ARESETN
+#             axi_interconnect_diag/M00_ARESETN
+#         } {
+#             connect_bd_net [pin proc_sys_reset_0/peripheral_aresetn] [pin $target]
+#         }
+#         connect_bd_net [pin proc_sys_reset_0/interconnect_aresetn] [pin axi_interconnect_diag/ARESETN]
+# 
+#         connect_bd_net [pin uart_rx_0/data_out] [pin uart_event_fifo_0/data_in]
+#         connect_bd_net [pin uart_rx_0/valid] [pin uart_event_fifo_0/valid_in]
+#         connect_bd_net [pin uart_rx_0/framing_error] [pin uart_event_fifo_0/framing_error_in]
+#         connect_bd_net [pin uart_event_fifo_0/status] [pin axi_gpio_diag/gpio_io_i]
+#         connect_bd_net [pin axi_gpio_diag/gpio2_io_o] [pin uart_event_fifo_0/command]
+# 
+#         create_bd_port -dir I uart_rx_i
+#         connect_bd_net [get_bd_ports uart_rx_i] [pin uart_rx_0/rx]
+#         if {[llength [get_files -quiet $rx_xdc]] == 0} {
+#             add_files -fileset constrs_1 -norecurse $rx_xdc
+#         }
+#         if {[llength [get_files -quiet $cdc_xdc]] == 0} {
+#             add_files -fileset constrs_1 -norecurse $cdc_xdc
+#         }
+#         set_property USED_IN_SYNTHESIS false [get_files $cdc_xdc]
+#         set_property USED_IN_IMPLEMENTATION true [get_files $cdc_xdc]
+#         set_property PROCESSING_ORDER LATE [get_files $cdc_xdc]
+# 
+#         # Let Vivado assign a free address; Python obtains it from the HWH file.
+#         puts "UART_STAGE1: assigning AXI addresses and validating the design."
+#         assign_bd_address
+#         validate_bd_design
+#         set reset_block [get_bd_cells proc_sys_reset_0]
+#         if {[lsearch -exact [list_property $reset_block] CONFIG.C_EXT_RESET_HIGH] >= 0} {
+#             if {[get_property CONFIG.C_EXT_RESET_HIGH $reset_block] ne "0"} {
+#                 fail "ext_reset_in is fed by FCLK_RESET0_N but is not configured active LOW after validation. Send the reset block properties before building."
+#             }
+#         }
+#         save_bd_design
+#         regenerate_bd_layout
+#         puts "UART_STAGE1: DONE. Block design validated and saved."
+#         puts "Next: Generate Output Products, Create HDL Wrapper (Vivado managed), then Generate Bitstream."
+#         puts "After a successful bitstream build, run vivado/02_export_overlay.tcl."
+#         puts "External UART input: uart_rx_i -> PYNQ-Z2 PMODA pin 1, FPGA Y18 (3.3 V logic)."
+#     }
+# }
+# uart_stage1::run [file dirname [file normalize [info script]]]
+Reading block design file <C:/Users/cici/Desktop/FPGA/pynq_uart/pynq_uart.srcs/sources_1/bd/uart_system/uart_system.bd>...
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:module_ref:uart_rx:1.0 - uart_rx_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
+Successfully read diagram <uart_system> from block design file <C:/Users/cici/Desktop/FPGA/pynq_uart/pynq_uart.srcs/sources_1/bd/uart_system/uart_system.bd>
+UART_STAGE1: Required IP xilinx.com:ip:axi_interconnect:2.1 is unavailable in this Vivado installation.
+    while executing
+"error "UART_STAGE1: $message""
+    (procedure "fail" line 2)
+    invoked from within
+"fail "Required IP $ip is unavailable in this Vivado installation.""
+    invoked from within
+"if {[llength [get_ipdefs -quiet $ip]] == 0} {
+                fail "Required IP $ip is unavailable in this Vivado installation."
+            }"
+    ("foreach" body line 2)
+    invoked from within
+"foreach ip {xilinx.com:ip:axi_gpio:2.0 xilinx.com:ip:axi_interconnect:2.1} {
+            if {[llength [get_ipdefs -quiet $ip]] == 0} {
+               ..."
+    (procedure "uart_stage1::run" line 64)
+    invoked from within
+"uart_stage1::run [file dirname [file normalize [info script]]]"
+    (file "C:/Users/cici/Desktop/FPGA/uart_board_stage1/vivado/01_connect_uart.tcl" line 200)
+puts "PROJECT_DIR = [get_property DIRECTORY [current_project]]"
+PROJECT_DIR = C:/Users/cici/Desktop/FPGA/pynq_uart
+puts "BD_FILE = [get_files -quiet */uart_system.bd]"
+BD_FILE = C:/Users/cici/Desktop/FPGA/pynq_uart/pynq_uart.srcs/sources_1/bd/uart_system/uart_system.bd
+puts "AXI_IP = [get_ipdefs -all -quiet xilinx.com:ip:axi_interconnect:2.1]"
+AXI_IP = xilinx.com:ip:axi_interconnect:2.1
+source {C:/Users/cici/Desktop/FPGA/uart_board_stage1/vivado/01_connect_uart.tcl}
+# namespace eval uart_stage1 {
+#     proc fail {message} {
+#         error "UART_STAGE1: $message"
+#     }
+# 
+#     proc one {objects description} {
+#         if {[llength $objects] != 1} {
+#             fail "Expected one $description; found [llength $objects]. Stop and send the complete Tcl error."
+#         }
+#         return [lindex $objects 0]
+#     }
+# 
+#     proc pin {name} {
+#         return [one [get_bd_pins -quiet $name] "BD pin $name"]
+#     }
+# 
+#     proc same_net {first second} {
+#         set a [get_bd_nets -quiet -of_objects [pin $first]]
+#         set b [get_bd_nets -quiet -of_objects [pin $second]]
+#         if {[llength $a] != 1 || [llength $b] != 1 || $a ne $b} {
+#             fail "Existing connection must be $first -> $second. Existing wires were not changed."
+#         }
+#     }
+# 
+#     proc unattached_pin {name} {
+#         if {[llength [get_bd_nets -quiet -of_objects [pin $name]]] != 0} {
+#             fail "$name already has a wire. This script will not replace existing connections."
+#         }
+#     }
+# 
+#     proc run {script_dir} {
+#         if {[llength [get_projects -quiet]] != 1} {
+#             fail "Open the existing pynq_uart.xpr project first."
+#         }
+#         set project [current_project]
+#         set part [get_property PART $project]
+#         if {![string equal -nocase $part "xc7z020clg400-1"]} {
+#             fail "Expected PYNQ-Z2 part xc7z020clg400-1, but project uses $part."
+#         }
+# 
+#         set bd_file [one [get_files -quiet */uart_system.bd] "uart_system.bd file"]
+#         open_bd_design $bd_file
+#         current_bd_instance /
+# 
+#         foreach name {processing_system7_0 uart_rx_0 proc_sys_reset_0 xlconstant_0} {
+#             one [get_bd_cells -quiet $name] "existing block $name"
+#         }
+#         foreach name {uart_event_fifo_0 axi_gpio_diag axi_interconnect_diag} {
+#             if {[llength [get_bd_cells -quiet $name]] != 0} {
+#                 fail "$name already exists. The add-on was already run or partly added. Do not run it twice; send the current diagram and Tcl output."
+#             }
+#         }
+#         if {[llength [get_bd_ports -quiet uart_rx_i]] != 0} {
+#             fail "An external port uart_rx_i already exists. It was not changed."
+#         }
+# 
+#         set root [file normalize [file join $script_dir ..]]
+#         set fifo_rtl [file join $root rtl uart_event_fifo.v]
+#         set rx_xdc [file join $root constraints uart_rx_pmoda.xdc]
+#         set cdc_xdc [file join $root constraints uart_rx_cdc.xdc]
+#         foreach path [list $fifo_rtl $rx_xdc $cdc_xdc] {
+#             if {![file isfile $path]} {
+#                 fail "Missing package file: $path . Extract the entire ZIP before running this script."
+#             }
+#         }
+# 
+#         set receiver [get_bd_cells uart_rx_0]
+#         set divisor [get_property CONFIG.CLKS_PER_BIT $receiver]
+#         if {$divisor ne "868"} {
+#             fail "Existing uart_rx_0 CLKS_PER_BIT is '$divisor', expected 868. No parameters were overwritten."
+#         }
+#         set ps [get_bd_cells processing_system7_0]
+#         set frequency [get_property CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ $ps]
+#         if {![string is double -strict $frequency] || abs($frequency - 100.0) > 0.001} {
+#             fail "Existing FCLK_CLK0 frequency is '$frequency' MHz, expected 100 MHz. No clock settings were changed."
+#         }
+# 
+#         same_net processing_system7_0/FCLK_CLK0 uart_rx_0/clk
+#         same_net processing_system7_0/FCLK_CLK0 processing_system7_0/M_AXI_GP0_ACLK
+#         same_net processing_system7_0/FCLK_CLK0 proc_sys_reset_0/slowest_sync_clk
+#         same_net processing_system7_0/FCLK_RESET0_N proc_sys_reset_0/ext_reset_in
+#         same_net proc_sys_reset_0/peripheral_reset uart_rx_0/rst
+#         same_net xlconstant_0/dout proc_sys_reset_0/dcm_locked
+#         if {[get_property CONFIG.CONST_VAL [get_bd_cells xlconstant_0]] ne "1"} {
+#             fail "xlconstant_0 driving dcm_locked must be 1. Existing constant was not changed."
+#         }
+#         foreach name {rx data_out valid framing_error} {
+#             unattached_pin uart_rx_0/$name
+#         }
+#         set ps_axi [one [get_bd_intf_pins -quiet processing_system7_0/M_AXI_GP0] "PS M_AXI_GP0"]
+#         if {[llength [get_bd_intf_nets -quiet -of_objects $ps_axi]] != 0} {
+#             fail "PS M_AXI_GP0 is already connected. This script will not replace an existing AXI system."
+#         }
+#         foreach ip {xilinx.com:ip:axi_gpio:2.0 xilinx.com:ip:axi_interconnect:2.1} {
+#             if {[llength [get_ipdefs -all -quiet $ip]] == 0} {
+#                 fail "Required IP $ip is unavailable in this Vivado installation."
+#             }
+#         }
+# 
+#         # Fix receiver metadata before adding blocks, so a read-only property
+#         # cannot leave an otherwise half-created AXI system behind.
+#         # Actual uart_rx RTL uses "if (rst)": this is metadata, not an inverter.
+#         set rst_pin [pin uart_rx_0/rst]
+#         if {[lsearch -exact [list_property $rst_pin] CONFIG.POLARITY] >= 0} {
+#             if {[catch {set_property CONFIG.POLARITY ACTIVE_HIGH $rst_pin} reason]} {
+#                 fail "Cannot set the existing UART rst metadata ACTIVE_HIGH. No new blocks were added. Add the ACTIVE_HIGH reset interface attribute to uart_rx.v, refresh the RTL module, then run again. Details: $reason"
+#             }
+#         }
+# 
+#         puts "UART_STAGE1: preflight passed (100 MHz, divisor 868). Adding the receive buffer and PS access."
+#         if {[llength [get_files -quiet $fifo_rtl]] == 0} {
+#             add_files -fileset sources_1 -norecurse $fifo_rtl
+#         }
+#         update_compile_order -fileset sources_1
+#         create_bd_cell -type module -reference uart_event_fifo uart_event_fifo_0
+# 
+#         create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_diag
+#         set_property -dict [list \
+#             CONFIG.C_IS_DUAL {1} \
+#             CONFIG.C_GPIO_WIDTH {32} \
+#             CONFIG.C_ALL_INPUTS {1} \
+#             CONFIG.C_ALL_OUTPUTS {0} \
+#             CONFIG.C_GPIO2_WIDTH {32} \
+#             CONFIG.C_ALL_INPUTS_2 {0} \
+#             CONFIG.C_ALL_OUTPUTS_2 {1} \
+#             CONFIG.C_DOUT_DEFAULT_2 {0x00000000} \
+#             CONFIG.C_INTERRUPT_PRESENT {0}] [get_bd_cells axi_gpio_diag]
+# 
+#         create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 axi_interconnect_diag
+#         set_property -dict [list CONFIG.NUM_SI {1} CONFIG.NUM_MI {1}] [get_bd_cells axi_interconnect_diag]
+#         connect_bd_intf_net $ps_axi [get_bd_intf_pins axi_interconnect_diag/S00_AXI]
+#         connect_bd_intf_net [get_bd_intf_pins axi_interconnect_diag/M00_AXI] [get_bd_intf_pins axi_gpio_diag/S_AXI]
+# 
+#         # All new logic shares the existing FCLK_CLK0 domain.
+#         foreach target {
+#             uart_event_fifo_0/clk
+#             axi_gpio_diag/s_axi_aclk
+#             axi_interconnect_diag/ACLK
+#             axi_interconnect_diag/S00_ACLK
+#             axi_interconnect_diag/M00_ACLK
+#         } {
+#             connect_bd_net [pin processing_system7_0/FCLK_CLK0] [pin $target]
+#         }
+# 
+#         # RTL uses active-HIGH reset; AXI IP uses active-LOW reset.
+#         connect_bd_net [pin proc_sys_reset_0/peripheral_reset] [pin uart_event_fifo_0/rst]
+#         foreach target {
+#             axi_gpio_diag/s_axi_aresetn
+#             axi_interconnect_diag/S00_ARESETN
+#             axi_interconnect_diag/M00_ARESETN
+#         } {
+#             connect_bd_net [pin proc_sys_reset_0/peripheral_aresetn] [pin $target]
+#         }
+#         connect_bd_net [pin proc_sys_reset_0/interconnect_aresetn] [pin axi_interconnect_diag/ARESETN]
+# 
+#         connect_bd_net [pin uart_rx_0/data_out] [pin uart_event_fifo_0/data_in]
+#         connect_bd_net [pin uart_rx_0/valid] [pin uart_event_fifo_0/valid_in]
+#         connect_bd_net [pin uart_rx_0/framing_error] [pin uart_event_fifo_0/framing_error_in]
+#         connect_bd_net [pin uart_event_fifo_0/status] [pin axi_gpio_diag/gpio_io_i]
+#         connect_bd_net [pin axi_gpio_diag/gpio2_io_o] [pin uart_event_fifo_0/command]
+# 
+#         create_bd_port -dir I uart_rx_i
+#         connect_bd_net [get_bd_ports uart_rx_i] [pin uart_rx_0/rx]
+#         if {[llength [get_files -quiet $rx_xdc]] == 0} {
+#             add_files -fileset constrs_1 -norecurse $rx_xdc
+#         }
+#         if {[llength [get_files -quiet $cdc_xdc]] == 0} {
+#             add_files -fileset constrs_1 -norecurse $cdc_xdc
+#         }
+#         set_property USED_IN_SYNTHESIS false [get_files $cdc_xdc]
+#         set_property USED_IN_IMPLEMENTATION true [get_files $cdc_xdc]
+#         set_property PROCESSING_ORDER LATE [get_files $cdc_xdc]
+# 
+#         # Let Vivado assign a free address; Python obtains it from the HWH file.
+#         puts "UART_STAGE1: assigning AXI addresses and validating the design."
+#         assign_bd_address
+#         validate_bd_design
+#         set reset_block [get_bd_cells proc_sys_reset_0]
+#         if {[lsearch -exact [list_property $reset_block] CONFIG.C_EXT_RESET_HIGH] >= 0} {
+#             if {[get_property CONFIG.C_EXT_RESET_HIGH $reset_block] ne "0"} {
+#                 fail "ext_reset_in is fed by FCLK_RESET0_N but is not configured active LOW after validation. Send the reset block properties before building."
+#             }
+#         }
+#         save_bd_design
+#         regenerate_bd_layout
+#         puts "UART_STAGE1: DONE. Block design validated and saved."
+#         puts "Next: Generate Output Products, Create HDL Wrapper (Vivado managed), then Generate Bitstream."
+#         puts "After a successful bitstream build, run vivado/02_export_overlay.tcl."
+#         puts "External UART input: uart_rx_i -> PYNQ-Z2 PMODA pin 1, FPGA Y18 (3.3 V logic)."
+#     }
+# }
+# uart_stage1::run [file dirname [file normalize [info script]]]
+UART_STAGE1: preflight passed (100 MHz, divisor 868). Adding the receive buffer and PS access.
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'push_accepted' has a dependency on the module local parameter or undefined parameter 'FIFO_DEPTH'.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst' of definition 'xilinx.com:signal:reset:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst' of definition 'xilinx.com:signal:reset:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rst'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'FREQ_HZ' with value '100000000'.
+INFO: [IP_Flow 19-4728] Bus Interface 'rst': Added interface parameter 'POLARITY' with value 'ACTIVE_HIGH'.
+INFO: [IP_Flow 19-7067] Note that bus interface 'clk' has a fixed FREQ_HZ of '100000000'. This value will be respected whenever this IP is instantiated in IP Integrator.
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_diag/gpio_io_i> is being overridden by the user with net <uart_event_fifo_0_status>. This pin will not be connected as a part of interface connection <GPIO>.
+WARNING: [BD 41-1306] The connection to interface pin </axi_gpio_diag/gpio2_io_o> is being overridden by the user with net <axi_gpio_diag_gpio2_io_o>. This pin will not be connected as a part of interface connection <GPIO2>.
+UART_STAGE1: assigning AXI addresses and validating the design.
+Slave segment '/axi_gpio_diag/S_AXI/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x4120_0000 [ 64K ]>.
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_M_AXI_GP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+Wrote  : <C:\Users\cici\Desktop\FPGA\pynq_uart\pynq_uart.srcs\sources_1\bd\uart_system\uart_system.bd> 
+Wrote  : <C:/Users/cici/Desktop/FPGA/pynq_uart/pynq_uart.srcs/sources_1/bd/uart_system/ui/bd_9ce536c0.ui> 
+UART_STAGE1: DONE. Block design validated and saved.
+Next: Generate Output Products, Create HDL Wrapper (Vivado managed), then Generate Bitstream.
+After a successful bitstream build, run vivado/02_export_overlay.tcl.
+External UART input: uart_rx_i -> PYNQ-Z2 PMODA pin 1, FPGA Y18 (3.3 V logic).
+generate_target all [get_files  C:/Users/cici/Desktop/FPGA/pynq_uart/pynq_uart.srcs/sources_1/bd/uart_system/uart_system.bd]
+INFO: [BD 41-1662] The design 'uart_system.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : <C:/Users/cici/Desktop/FPGA/pynq_uart/pynq_uart.srcs/sources_1/bd/uart_system/ui/bd_9ce536c0.ui> 
+Verilog Output written to : c:/Users/cici/Desktop/FPGA/pynq_uart/pynq_uart.gen/sources_1/bd/uart_system/synth/uart_system.v
+Verilog Output written to : c:/Users/cici/Desktop/FPGA/pynq_uart/pynq_uart.gen/sources_1/bd/uart_system/sim/uart_system.v
+Verilog Output written to : c:/Users/cici/Desktop/FPGA/pynq_uart/pynq_uart.gen/sources_1/bd/uart_system/hdl/uart_system_wrapper.v
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_GP0'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block uart_rx_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block uart_event_fifo_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_diag .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/cici/Desktop/FPGA/pynq_uart/pynq_uart.gen/sources_1/bd/uart_system/ip/uart_system_auto_pc_0/uart_system_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_diag/s00_couplers/auto_pc .
+Exporting to file c:/Users/cici/Desktop/FPGA/pynq_uart/pynq_uart.gen/sources_1/bd/uart_system/hw_handoff/uart_system.hwh
+Generated Hardware Definition File c:/Users/cici/Desktop/FPGA/pynq_uart/pynq_uart.gen/sources_1/bd/uart_system/synth/uart_system.hwdef
+generate_target: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2003.992 ; gain = 156.758
+catch { config_ip_cache -export [get_ips -all uart_system_uart_rx_0_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: uart_system_uart_rx_0_0
+catch { config_ip_cache -export [get_ips -all uart_system_proc_sys_reset_0_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: uart_system_proc_sys_reset_0_0
+catch { config_ip_cache -export [get_ips -all uart_system_uart_event_fifo_0_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: uart_system_uart_event_fifo_0_0
+catch { config_ip_cache -export [get_ips -all uart_system_axi_gpio_diag_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: uart_system_axi_gpio_diag_0
+catch { config_ip_cache -export [get_ips -all uart_system_auto_pc_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: uart_system_auto_pc_0
+export_ip_user_files -of_objects [get_files C:/Users/cici/Desktop/FPGA/pynq_uart/pynq_uart.srcs/sources_1/bd/uart_system/uart_system.bd] -no_script -sync -force -quiet
+INFO: [Vivado 12-23855] The given sub-design is auto disabled, no action will be taken: 'C:/Users/cici/Desktop/FPGA/pynq_uart/pynq_uart.srcs/sources_1/bd/uart_system/uart_system.bd'
+export_simulation -of_objects [get_files C:/Users/cici/Desktop/FPGA/pynq_uart/pynq_uart.srcs/sources_1/bd/uart_system/uart_system.bd] -directory C:/Users/cici/Desktop/FPGA/pynq_uart/pynq_uart.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/cici/Desktop/FPGA/pynq_uart/pynq_uart.ip_user_files -ipstatic_source_dir C:/Users/cici/Desktop/FPGA/pynq_uart/pynq_uart.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/cici/Desktop/FPGA/pynq_uart/pynq_uart.cache/compile_simlib/modelsim} {questa=C:/Users/cici/Desktop/FPGA/pynq_uart/pynq_uart.cache/compile_simlib/questa} {riviera=C:/Users/cici/Desktop/FPGA/pynq_uart/pynq_uart.cache/compile_simlib/riviera} {activehdl=C:/Users/cici/Desktop/FPGA/pynq_uart/pynq_uart.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+make_wrapper -files [get_files C:/Users/cici/Desktop/FPGA/pynq_uart/pynq_uart.srcs/sources_1/bd/uart_system/uart_system.bd] -top
+add_files -norecurse c:/Users/cici/Desktop/FPGA/pynq_uart/pynq_uart.gen/sources_1/bd/uart_system/hdl/uart_system_wrapper.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 28 00:20:01 2026...

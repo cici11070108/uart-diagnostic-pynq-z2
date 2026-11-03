@@ -1,0 +1,10 @@
+UART stage 2: runtime-selectable baud, 100 MHz, 8N1
+Project: C:/Users/cici/Desktop/FPGA/pynq_uart
+Vivado: 2023.2
+Export local time: 20261029_203751
+Bitstream source: C:/Users/cici/Desktop/FPGA/pynq_uart/pynq_uart.runs/impl_1/uart_system_wrapper.bit
+HWH source: C:/Users/cici/Desktop/FPGA/pynq_uart/pynq_uart.gen/sources_1/bd/uart_system/hw_handoff/uart_system.hwh
+Build status: write_bitstream Complete!
+Baud codes: 0=9600, 1=19200, 2=38400, 3=57600, 4=115200, 5=230400
+Board runtime protocol signature: B0..B5; default B4
+Upload the four files at this folder's root to the board Jupyter folder uart_baud.

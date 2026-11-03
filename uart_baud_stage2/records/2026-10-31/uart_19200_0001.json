@@ -1,0 +1,33 @@
+{
+  "configuration": {
+    "requested_baud": 19200,
+    "hardware_baud_setting": 19200,
+    "clocks_per_bit": 5208,
+    "calculated_baud": 19201.228878648235,
+    "calculated_baud_is_measurement": false,
+    "data_bits": 8,
+    "parity": "none",
+    "stop_bits": 1,
+    "io_voltage": "3.3V",
+    "pl_clock_hz": 100000000
+  },
+  "event_count": 64,
+  "valid_byte_count": 64,
+  "framing_error_count": 0,
+  "session_overflow_seen": false,
+  "fifo_remaining": 0,
+  "fifo_remaining_last_known": 0,
+  "fifo_snapshot_at_utc": "2025-05-03T18:41:05.929773+00:00",
+  "hardware_error": false,
+  "attempted_baud_after_this_session": null,
+  "current_hardware_baud": 19200,
+  "session_started_at_utc": "2025-05-03T18:39:35.706054+00:00",
+  "exported_at_utc": "2025-05-03T18:41:05.942491+00:00",
+  "hardware_timestamps": false,
+  "timestamp_note": "时间仅为 Python 主机操作时间，没有 FPGA 接收时间戳；计算线速不是实测值。",
+  "checks": {
+    "ramp_64_match": true,
+    "break_recovery_match": false
+  },
+  "csv_file": "uart_19200_0001.csv"
+}

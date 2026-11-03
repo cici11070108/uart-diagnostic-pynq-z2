@@ -1,0 +1,4 @@
+﻿index,data_hex,data_valid,framing_error,overflow_seen_at_read,session_overflow_seen,hardware_baud_setting,clocks_per_bit
+1,,0,1,0,0,57600,1736
+2,55,1,0,0,0,57600,1736
+3,AA,1,0,0,0,57600,1736

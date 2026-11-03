@@ -1,0 +1,145 @@
+{
+  "input_root": "uart_baud_stage2",
+  "submission_root": "uart_baud_stage2",
+  "input_modified": false,
+  "version_comparison": {
+    "board_and_export_driver_byte_identical": true,
+    "board_and_export_notebook_originally_byte_identical": true,
+    "records_has_driver": false,
+    "records_notebook_core_first_six_cells_source_identical_to_board": true,
+    "records_notebook_total_cells": 10,
+    "records_notebook_code_cells": 5,
+    "records_additions": [
+      "ZIP data-URI download helper",
+      "Notebook self-download helper embedding older notebook snapshots",
+      "FIFO overflow assertion/readback cell and real output",
+      "Final power-cycle note"
+    ],
+    "records_notebook_python_metadata": "3.10.4",
+    "board_template_python_metadata": "3.6.0",
+    "uploaded_board_driver_notebook_sender_tests_match_workspace_baseline": true,
+    "chosen_runtime_entry": "uart_baud_stage2/board/04_uart_baud_panel.ipynb (download fix applied; synchronized export copy)",
+    "records_notebook_preserved_byte_for_byte": true
+  },
+  "findings": [
+    {
+      "severity": "high",
+      "title": "Hard-coded download path mismatched the actual notebook directory",
+      "evidence": "save() linked /files/uart_baud/panel_exports/...; recorded runtime directory was /home/xilinx/jupyter_notebooks/uart_diag/uart_baud/panel_exports.",
+      "status": "fixed in submission board/export copies only",
+      "fix": "CSV and JSON bytes embedded in data:application/octet-stream;base64 links with explicit download filenames. Files still written to panel_exports. Added raw-file cap with file-browser fallback."
+    },
+    {
+      "severity": "medium",
+      "title": "Executed records notebook is not a clean Run All entry point",
+      "evidence": "Its added overflow cell requires count=1024 and overflow=True; startup reloads hardware and clears this state. Extra self-download outputs embed two older notebook snapshots.",
+      "status": "preserved as evidence",
+      "recommendation": "Use clean board/export notebook for operation; retain records notebook as experiment evidence rather than replacing source entry."
+    },
+    {
+      "severity": "note",
+      "title": "Long overflow stimulus is separate from the bounded Windows sender",
+      "evidence": "send_uart_baud.py caps payload at64 bytes. The archived overflow check expects a prefilled1024-event FIFO.",
+      "recommendation": "Document the actual long-burst Windows stimulus separately; do not claim the archived notebook alone reproduces the overflow test."
+    }
+  ],
+  "driver_panel_review": {
+    "configuration": "Six supported rates; selected code read from hardware B0..B5 signature. Wrong/old overlay rejected.",
+    "switching": "Requires unread FIFO count zero; exports read records before SET_BAUD; starts new session only after verified ACK/readback.",
+    "clear": "Begins new record by saving already-read records first then clearing FIFO. Unread events are intentionally discarded, so documented stop/read/export order matters.",
+    "failure": "Disk-save failure blocks clear/switch; uncertain hardware-command completion blocks retry; hardware error permits export of already-read records under original configuration.",
+    "read": "One event committed at a time, at most256 per click; table200, session10000, hardwareFIFO1024; manual polling rather than continuous lossless streaming.",
+    "time": "Metadata explicitly distinguishes host operation timestamps and calculated baud from measured waveform/FPGA timestamps."
+  },
+  "dependencies": {
+    "board_external": [
+      "pynq",
+      "ipywidgets",
+      "IPython"
+    ],
+    "board_platform": "Linux/PYNQ; fcntl lock is Unix-only; not a Windows notebook target.",
+    "windows_sender_external": [
+      "pyserial"
+    ],
+    "windows_sender": "COM5 is an example/current adapter setting; selectable six baud,8N1,no flow control; bounded1..64-byte hex/ramp or requested20ms BREAK+100ms gap+55AA.",
+    "offline_tests": "stdlib unittest, mock MMIO and widgets; no FPGA/browser execution."
+  },
+  "privacy_review": {
+    "scope": "Stage2 board/export/records notebook and driver plus Windows sender; recursively decoded record-notebook embedded data URLs and ZIP entries in memory.",
+    "known_real_name_found": false,
+    "credential_literal_patterns_found": false,
+    "personal_path_found": "Windows username cici in Notebook instructions and sender docstring; board Linux home directory /home/xilinx is a stock image path.",
+    "embedded_scan_report": "/tmp/uart_code_review_20261102/embedded_software_scan.json",
+    "limitation": "Pattern/content inspection is not a formal secret scan of unrelated binaries, archives or the entire Vivado tree."
+  },
+  "tests": {
+    "before": {
+      "passed": 19,
+      "failed": 0
+    },
+    "after": {
+      "passed": 22,
+      "failed": 0
+    },
+    "new_tests": [
+      "Nested-directory downloads decode byte-for-byte to actual CSV/JSON",
+      "10000-event data-URI size remains below conservative1MiB combinedURL budget",
+      "Unexpected>1MiB raw file retains file-browser download fallback"
+    ],
+    "python_runtime": "3.12.14",
+    "python36_syntax_parse_passed": true,
+    "log": "/tmp/uart_code_review_20261102/software_tests_after.txt",
+    "board_retest_performed": false,
+    "browser_click_test_performed": false
+  },
+  "download_size_check": {
+    "records": 10000,
+    "csv_bytes": 279019,
+    "json_bytes": 1064,
+    "csv_data_url_chars": 372065,
+    "json_data_url_chars": 1457,
+    "combined_link_html_bytes": 373676,
+    "inline_raw_file_cap_bytes": 1048576
+  },
+  "browser_documentation": [
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/URI/Reference/Schemes/data",
+      "ref": "turn215view0",
+      "finding": "MDN documents current Chromium/Firefox data URL limit512MB; application raw-file cap1MiB is far lower."
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a",
+      "ref": "turn216view1",
+      "finding": "HTML download attribute supports data URLs; browser/user settings still influence save versus open behavior."
+    }
+  ],
+  "changed_files": [
+    {
+      "path": "uart_baud_stage2/board/04_uart_baud_panel.ipynb",
+      "input_sha256": "7641c8e81995d7df37c80b1c15fd29565599e27d78930eb275e54973dc6cfdad",
+      "submission_sha256": "c51e6a6cb315e400a907cc13eef554bcafc9ce2da901cd8723a6fea98c5e3035",
+      "changed": true
+    },
+    {
+      "path": "uart_baud_stage2/export/20261029_203751/04_uart_baud_panel.ipynb",
+      "input_sha256": "7641c8e81995d7df37c80b1c15fd29565599e27d78930eb275e54973dc6cfdad",
+      "submission_sha256": "c51e6a6cb315e400a907cc13eef554bcafc9ce2da901cd8723a6fea98c5e3035",
+      "changed": true
+    },
+    {
+      "path": "uart_baud_stage2/tests/test_uart_diag_baud.py",
+      "input_sha256": "2d5ff262d725dbbcc3d789b322169048c7cc15efe7d5d3a529afcd6c9882fefb",
+      "submission_sha256": "68c9813b7ebf6c076f1cba1c494a80aa4ad7c45f8718638c1f1d5a755b938afc",
+      "changed": true
+    }
+  ],
+  "unchanged_key_files": {
+    "board/uart_diag_baud.py": true,
+    "export/20261029_203751/uart_diag_baud.py": true,
+    "pc/send_uart_baud.py": true,
+    "rtl/uart_diag_baud_core.v": true,
+    "constraints/uart_baud_cdc.xdc": true,
+    "records/2026-10-31/04_uart_baud_panel.ipynb": true
+  },
+  "packaging_followup": "Recompute package SHA256SUMS after all team changes. This review changed only the two runtime notebooks and the corresponding test file."
+}

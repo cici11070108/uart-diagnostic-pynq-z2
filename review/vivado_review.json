@@ -1,0 +1,501 @@
+{
+  "scope": "Read-only static audit of uploaded project and its supplied Vivado build artifacts; no Vivado run, synthesis, implementation, bitstream regeneration or board access performed.",
+  "input_root": "/tmp/uart_code_review_20261102/input",
+  "input_changes": [],
+  "overall_judgment": {
+    "missing_active_source_or_wrong_export_pair_blocker_found": false,
+    "source_reference_count": 9,
+    "all_explicit_source_files_present": true,
+    "all_bd_xci_references_present": true,
+    "can_preserve_three_sibling_directories": true,
+    "submission_recommendation": "Keep hardware/XPR/constraints and tested bit/HWH unchanged. Preserve the three sibling directories. Describe known build critical warnings honestly; do not claim a warning-free build.",
+    "rebuild_required_before_existing_board_demo_by_this_review": false,
+    "portability_prerequisites": "Vivado 2023.2, Zynq-7000 device support and a resolvable PYNQ-Z2 board definition. A clean-machine rebuild was not executed."
+  },
+  "project": {
+    "path": "pynq_uart/pynq_uart.xpr",
+    "part": "xc7z020clg400-1",
+    "top": "uart_system_wrapper",
+    "board_part": "tul.com.tw:pynq-z2:part0:1.0",
+    "board_part_repo_paths_xpr": "$PPRDIR/../../../AppData/Roaming/Xilinx/Vivado/2023.2/xhub/board_store/xilinx_board_store",
+    "embedded_board_xml_present": false,
+    "historical_import_path": "D:/Study/IC-Portfolio/projects/uart/rtl/uart_rx.v",
+    "historical_import_path_explanation": "The old receiver is an imported local copy present in .srcs and AutoDisabled. ImportPath is provenance, not its effective current source File Path.",
+    "absolute_path_explanation": "Root Project Path and generated .runs Tcl retain original C: paths; effective XPR source File references are macro/relative paths. Regenerate runs through the reopened XPR instead of executing historical generated .runs scripts directly.",
+    "source_file_references": [
+      {
+        "fileset": "sources_1",
+        "project_reference": "$PPRDIR/../uart_baud_stage2/rtl/uart_diag_baud_core.v",
+        "resolved_relative_path": "uart_baud_stage2/rtl/uart_diag_baud_core.v",
+        "exists": true,
+        "file_attributes": [
+          {
+            "Name": "UsedIn",
+            "Val": "synthesis"
+          },
+          {
+            "Name": "UsedIn",
+            "Val": "implementation"
+          },
+          {
+            "Name": "UsedIn",
+            "Val": "simulation"
+          }
+        ]
+      },
+      {
+        "fileset": "sources_1",
+        "project_reference": "$PSRCDIR/sources_1/bd/uart_system/uart_system.bd",
+        "resolved_relative_path": "pynq_uart/pynq_uart.srcs/sources_1/bd/uart_system/uart_system.bd",
+        "exists": true,
+        "file_attributes": [
+          {
+            "Name": "UsedIn",
+            "Val": "synthesis"
+          },
+          {
+            "Name": "UsedIn",
+            "Val": "implementation"
+          },
+          {
+            "Name": "UsedIn",
+            "Val": "simulation"
+          }
+        ]
+      },
+      {
+        "fileset": "sources_1",
+        "project_reference": "$PGENDIR/sources_1/bd/uart_system/hdl/uart_system_wrapper.v",
+        "resolved_relative_path": "pynq_uart/pynq_uart.gen/sources_1/bd/uart_system/hdl/uart_system_wrapper.v",
+        "exists": true,
+        "file_attributes": [
+          {
+            "Name": "UsedIn",
+            "Val": "synthesis"
+          },
+          {
+            "Name": "UsedIn",
+            "Val": "implementation"
+          },
+          {
+            "Name": "UsedIn",
+            "Val": "simulation"
+          }
+        ]
+      },
+      {
+        "fileset": "sources_1",
+        "project_reference": "$PSRCDIR/sources_1/imports/rtl/uart_rx.v",
+        "resolved_relative_path": "pynq_uart/pynq_uart.srcs/sources_1/imports/rtl/uart_rx.v",
+        "exists": true,
+        "file_attributes": [
+          {
+            "Name": "AutoDisabled",
+            "Val": "1"
+          },
+          {
+            "Name": "ImportPath",
+            "Val": "D:/Study/IC-Portfolio/projects/uart/rtl/uart_rx.v"
+          },
+          {
+            "Name": "ImportTime",
+            "Val": "1791905186"
+          },
+          {
+            "Name": "UsedIn",
+            "Val": "synthesis"
+          },
+          {
+            "Name": "UsedIn",
+            "Val": "implementation"
+          },
+          {
+            "Name": "UsedIn",
+            "Val": "simulation"
+          }
+        ]
+      },
+      {
+        "fileset": "sources_1",
+        "project_reference": "$PPRDIR/../uart_board_stage1/rtl/uart_event_fifo.v",
+        "resolved_relative_path": "uart_board_stage1/rtl/uart_event_fifo.v",
+        "exists": true,
+        "file_attributes": [
+          {
+            "Name": "AutoDisabled",
+            "Val": "1"
+          },
+          {
+            "Name": "UsedIn",
+            "Val": "synthesis"
+          },
+          {
+            "Name": "UsedIn",
+            "Val": "implementation"
+          },
+          {
+            "Name": "UsedIn",
+            "Val": "simulation"
+          }
+        ]
+      },
+      {
+        "fileset": "constrs_1",
+        "project_reference": "$PPRDIR/../uart_board_stage1/constraints/uart_rx_pmoda.xdc",
+        "resolved_relative_path": "uart_board_stage1/constraints/uart_rx_pmoda.xdc",
+        "exists": true,
+        "file_attributes": [
+          {
+            "Name": "UsedIn",
+            "Val": "synthesis"
+          },
+          {
+            "Name": "UsedIn",
+            "Val": "implementation"
+          }
+        ]
+      },
+      {
+        "fileset": "constrs_1",
+        "project_reference": "$PPRDIR/../uart_board_stage1/constraints/uart_rx_cdc.xdc",
+        "resolved_relative_path": "uart_board_stage1/constraints/uart_rx_cdc.xdc",
+        "exists": true,
+        "file_attributes": [
+          {
+            "Name": "ProcessingOrder",
+            "Val": "LATE"
+          }
+        ]
+      },
+      {
+        "fileset": "constrs_1",
+        "project_reference": "$PPRDIR/../uart_baud_stage2/constraints/uart_baud_cdc.xdc",
+        "resolved_relative_path": "uart_baud_stage2/constraints/uart_baud_cdc.xdc",
+        "exists": true,
+        "file_attributes": [
+          {
+            "Name": "UsedIn",
+            "Val": "implementation"
+          },
+          {
+            "Name": "ProcessingOrder",
+            "Val": "LATE"
+          }
+        ]
+      },
+      {
+        "fileset": "utils_1",
+        "project_reference": "$PSRCDIR/utils_1/imports/synth_1/uart_system_wrapper.dcp",
+        "resolved_relative_path": "pynq_uart/pynq_uart.srcs/utils_1/imports/synth_1/uart_system_wrapper.dcp",
+        "exists": true,
+        "file_attributes": [
+          {
+            "Name": "UsedIn",
+            "Val": "synthesis"
+          },
+          {
+            "Name": "UsedIn",
+            "Val": "implementation"
+          },
+          {
+            "Name": "UsedInSteps",
+            "Val": "synth_1"
+          },
+          {
+            "Name": "AutoDcp",
+            "Val": "1"
+          }
+        ]
+      }
+    ],
+    "bd_xci_references": [
+      {
+        "object": "design/components/processing_system7_0",
+        "xci_reference": "ip\\uart_system_processing_system7_0_0\\uart_system_processing_system7_0_0.xci",
+        "resolved_relative_path": "pynq_uart/pynq_uart.srcs/sources_1/bd/uart_system/ip/uart_system_processing_system7_0_0/uart_system_processing_system7_0_0.xci",
+        "exists": true
+      },
+      {
+        "object": "design/components/proc_sys_reset_0",
+        "xci_reference": "ip\\uart_system_proc_sys_reset_0_0\\uart_system_proc_sys_reset_0_0.xci",
+        "resolved_relative_path": "pynq_uart/pynq_uart.srcs/sources_1/bd/uart_system/ip/uart_system_proc_sys_reset_0_0/uart_system_proc_sys_reset_0_0.xci",
+        "exists": true
+      },
+      {
+        "object": "design/components/xlconstant_0",
+        "xci_reference": "ip\\uart_system_xlconstant_0_0\\uart_system_xlconstant_0_0.xci",
+        "resolved_relative_path": "pynq_uart/pynq_uart.srcs/sources_1/bd/uart_system/ip/uart_system_xlconstant_0_0/uart_system_xlconstant_0_0.xci",
+        "exists": true
+      },
+      {
+        "object": "design/components/axi_gpio_diag",
+        "xci_reference": "ip\\uart_system_axi_gpio_diag_0\\uart_system_axi_gpio_diag_0.xci",
+        "resolved_relative_path": "pynq_uart/pynq_uart.srcs/sources_1/bd/uart_system/ip/uart_system_axi_gpio_diag_0/uart_system_axi_gpio_diag_0.xci",
+        "exists": true
+      },
+      {
+        "object": "design/components/axi_interconnect_diag",
+        "xci_reference": "ip\\uart_system_axi_interconnect_diag_0\\uart_system_axi_interconnect_diag_0.xci",
+        "resolved_relative_path": "pynq_uart/pynq_uart.srcs/sources_1/bd/uart_system/ip/uart_system_axi_interconnect_diag_0/uart_system_axi_interconnect_diag_0.xci",
+        "exists": true
+      },
+      {
+        "object": "design/components/axi_interconnect_diag/components/s00_couplers/components/auto_pc",
+        "xci_reference": "ip\\uart_system_auto_pc_0\\uart_system_auto_pc_0.xci",
+        "resolved_relative_path": "pynq_uart/pynq_uart.srcs/sources_1/bd/uart_system/ip/uart_system_auto_pc_0/uart_system_auto_pc_0.xci",
+        "exists": true
+      },
+      {
+        "object": "design/components/uart_diag_baud_core_0",
+        "xci_reference": "ip\\uart_system_uart_diag_baud_core_0_0\\uart_system_uart_diag_baud_core_0_0.xci",
+        "resolved_relative_path": "pynq_uart/pynq_uart.srcs/sources_1/bd/uart_system/ip/uart_system_uart_diag_baud_core_0_0/uart_system_uart_diag_baud_core_0_0.xci",
+        "exists": true
+      }
+    ],
+    "bd_design_info": {
+      "boundary_crc": "0x5CE4D01555A3E4BC",
+      "device": "xc7z020clg400-1",
+      "gen_directory": "../../../../pynq_uart.gen/sources_1/bd/uart_system",
+      "name": "uart_system",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2023.2",
+      "validated": "true"
+    },
+    "bd_components": {
+      "processing_system7_0": {
+        "vlnv": "xilinx.com:ip:processing_system7:5.5"
+      },
+      "proc_sys_reset_0": {
+        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0"
+      },
+      "xlconstant_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1"
+      },
+      "axi_gpio_diag": {
+        "vlnv": "xilinx.com:ip:axi_gpio:2.0"
+      },
+      "axi_interconnect_diag": {
+        "vlnv": "xilinx.com:ip:axi_interconnect:2.1"
+      },
+      "uart_diag_baud_core_0": {
+        "vlnv": "xilinx.com:module_ref:uart_diag_baud_core:1.0"
+      }
+    },
+    "ps_saved_parameter_count": 525,
+    "ps_settings_explanation": "PS configuration is already serialized into BD/XCI, including DDR, M_AXI_GP0 and 100MHz FCLK; no fresh Board Automation or preset reapplication is required simply to recover the design.",
+    "bd_path_normalization_note": "BD xci_path strings use Windows backslashes; static Linux inspection normalizes them as Windows path separators before checking existence."
+  },
+  "verified_hardware_configuration": {
+    "clock_mhz": 100.0,
+    "clock_period_ns": 10.0,
+    "clock_domain": "FCLK_CLK0 drives PS GP0 ACLK, GPIO, AXI interconnect, reset synchronizer, and uart_diag_baud_core_0.",
+    "core_module": "uart_diag_baud_core",
+    "core_bd_instance": "uart_diag_baud_core_0",
+    "uart_rx_port": "uart_rx_i",
+    "uart_rx_package_pin": "Y18",
+    "uart_rx_iostandard": "LVCMOS33",
+    "uart_rx_bank": 34,
+    "uart_rx_pull": "PULLUP",
+    "physical_io_evidence": "pynq_uart/pynq_uart.runs/impl_1/uart_system_wrapper_io_placed.rpt:435",
+    "pin_constraints": "uart_board_stage1/constraints/uart_rx_pmoda.xdc",
+    "gpio_instance": "axi_gpio_diag",
+    "gpio_base_address": "0x41200000",
+    "gpio_high_address": "0x4120FFFF",
+    "gpio_range_bytes": 65536,
+    "gpio_channel1": "32-bit input from core/status",
+    "gpio_channel2": "32-bit output to core/command",
+    "reset": "proc_sys_reset peripheral_reset feeds active-high core rst; peripheral_aresetn feeds GPIO/interconnect AXI active-low resets.",
+    "historic_net_name_note": "uart_event_fifo_0_status is a historical net name whose current endpoints correctly refer to the new core/status and AXI GPIO input."
+  },
+  "build_export_identity": [
+    {
+      "kind": "bitstream",
+      "build_file": "pynq_uart/pynq_uart.runs/impl_1/uart_system_wrapper.bit",
+      "export_file": "uart_baud_stage2/export/20261029_203751/uart_diag_baud.bit",
+      "build_sha256": "68db0b96b0f54e54e6fcd072f0dd19152aa4cf25eb26f00aa0038caa8175f93d",
+      "export_sha256": "68db0b96b0f54e54e6fcd072f0dd19152aa4cf25eb26f00aa0038caa8175f93d",
+      "identical_bytes": true,
+      "size_bytes": 4045679
+    },
+    {
+      "kind": "hardware_handoff",
+      "build_file": "pynq_uart/pynq_uart.gen/sources_1/bd/uart_system/hw_handoff/uart_system.hwh",
+      "export_file": "uart_baud_stage2/export/20261029_203751/uart_diag_baud.hwh",
+      "build_sha256": "79e5e243638a28f49502a55427feda241eb3532cb8415c8c4cd1f2b359d07fb3",
+      "export_sha256": "79e5e243638a28f49502a55427feda241eb3532cb8415c8c4cd1f2b359d07fb3",
+      "identical_bytes": true,
+      "size_bytes": 156363
+    }
+  ],
+  "rtl_sha256": "5e09a836e2000c7a322afdc477ed0966e99d1f754210adfe141818895438093d",
+  "identity_limit": "Matching bit/HWH hashes establish that the export matches supplied build outputs. Static inspection cannot prove every editable current RTL byte was used to generate the bitstream; no fresh rebuild or formal equivalence was performed.",
+  "routed_results": {
+    "timing_report": "uart_baud_stage2/export/20261029_203751/reports/timing_summary.rpt",
+    "wns_ns": 2.914,
+    "tns_ns": 0.0,
+    "whs_ns": 0.039,
+    "ths_ns": 0.0,
+    "wpws_ns": 3.75,
+    "tpws_ns": 0.0,
+    "setup_failing_endpoints": 0,
+    "hold_failing_endpoints": 0,
+    "pulse_failing_endpoints": 0,
+    "no_clock": 0,
+    "unconstrained_internal_endpoints": 0,
+    "no_input_delay": 1,
+    "no_input_delay_explanation": "The single async UART RX input is covered by the user false path to the first synchronizer flip-flop. The report distinguishes it from missing unexcepted input delay. It is not a reason to fabricate a synchronous input delay.",
+    "cdc_report": "uart_baud_stage2/export/20261029_203751/reports/cdc.rpt",
+    "cdc_entries": [
+      {
+        "rule": "CDC-3",
+        "severity": "Info",
+        "count": 1,
+        "depth": 2,
+        "exception": "False Path",
+        "source": "uart_rx_i",
+        "destination": "uart_system_i/uart_diag_baud_core_0/inst/uart_receiver/rx_meta_reg/D",
+        "description": "1-bit synchronized with ASYNC_REG property"
+      }
+    ],
+    "drc_report": "pynq_uart/pynq_uart.runs/impl_1/uart_system_wrapper_drc_routed.rpt",
+    "drc_violations": 0,
+    "methodology_report": "pynq_uart/pynq_uart.runs/impl_1/uart_system_wrapper_methodology_drc_routed.rpt",
+    "methodology_violations": 0,
+    "methodology_note": "This full code package supplies the routed methodology report, unlike the earlier three-report-only upload. Its dated fully routed result is available even though the exported timing-summary session says methodology had not been run in that session.",
+    "route_status_report": "pynq_uart/pynq_uart.runs/impl_1/uart_system_wrapper_route_status.rpt",
+    "fully_routed_nets": 1789,
+    "routing_error_nets": 0
+  },
+  "important_finding": {
+    "id": "VIVADO-XDC-001",
+    "severity": "known build critical warnings; cleanup item, not evidence of failed current bitstream",
+    "count": 4,
+    "command_counts": {
+      "if": 3,
+      "concat": 1
+    },
+    "message_id": "Designutils 20-1307",
+    "source": "uart_baud_stage2/constraints/uart_baud_cdc.xdc",
+    "source_lines": [
+      6,
+      10,
+      14,
+      17
+    ],
+    "effect_observed": "The intended RX synchronizer and false path are present in the actual routed CDC report. Routed timing, DRC and methodology checks pass. Original build nevertheless has four Critical Warnings; do not report zero warnings.",
+    "action_now": "Document; retain original XPR, constraint file and bit/HWH unchanged in the submission package.",
+    "optional_future_cleanup": "Treat this constraint file as unmanaged Tcl using FILE_TYPE Tcl while retaining implementation-only and LATE, or separate Tcl guards from simple XDC. Rebuild and rerun timing, CDC, DRC, methodology and board regression before presenting a new cleaned build.",
+    "example_not_executed": "set_property file_type Tcl [get_files -of [get_filesets constrs_1] *uart_baud_cdc.xdc]",
+    "official_reference": "https://docs.amd.com/r/2023.2-English/ug903-vivado-using-constraints/About-XDC-Constraints"
+  },
+  "critical_warning_and_error_lines": [
+    {
+      "file": "pynq_uart/pynq_uart.runs/impl_1/runme.log",
+      "line": 47,
+      "message": "CRITICAL WARNING: [Designutils 20-1307] Command 'if' is not supported in the xdc constraint file. [C:/Users/cici/Desktop/FPGA/uart_baud_stage2/constraints/uart_baud_cdc.xdc:6]"
+    },
+    {
+      "file": "pynq_uart/pynq_uart.runs/impl_1/runme.log",
+      "line": 48,
+      "message": "CRITICAL WARNING: [Designutils 20-1307] Command 'if' is not supported in the xdc constraint file. [C:/Users/cici/Desktop/FPGA/uart_baud_stage2/constraints/uart_baud_cdc.xdc:10]"
+    },
+    {
+      "file": "pynq_uart/pynq_uart.runs/impl_1/runme.log",
+      "line": 49,
+      "message": "CRITICAL WARNING: [Designutils 20-1307] Command 'if' is not supported in the xdc constraint file. [C:/Users/cici/Desktop/FPGA/uart_baud_stage2/constraints/uart_baud_cdc.xdc:14]"
+    },
+    {
+      "file": "pynq_uart/pynq_uart.runs/impl_1/runme.log",
+      "line": 50,
+      "message": "CRITICAL WARNING: [Designutils 20-1307] Command 'concat' is not supported in the xdc constraint file. [C:/Users/cici/Desktop/FPGA/uart_baud_stage2/constraints/uart_baud_cdc.xdc:17]"
+    }
+  ],
+  "run_log_warning_counts": [
+    {
+      "log": "pynq_uart/pynq_uart.runs/impl_1/runme.log",
+      "counts": {
+        "CRITICAL WARNING: Designutils 20-1307": 4,
+        "WARNING: Opt 31-1131": 63
+      }
+    },
+    {
+      "log": "pynq_uart/pynq_uart.runs/synth_1/runme.log",
+      "counts": {
+        "WARNING: Synth 8-7071": 6,
+        "WARNING: Synth 8-7023": 3,
+        "WARNING: Synth 8-7129": 8,
+        "WARNING: Synth 8-7080": 1
+      }
+    },
+    {
+      "log": "pynq_uart/pynq_uart.runs/uart_system_axi_gpio_diag_0_synth_1/runme.log",
+      "counts": {
+        "WARNING: Synth 8-6014": 65,
+        "WARNING: Synth 8-7129": 30,
+        "WARNING: Synth 8-7080": 1
+      }
+    },
+    {
+      "log": "pynq_uart/pynq_uart.runs/uart_system_proc_sys_reset_0_0_synth_1/runme.log",
+      "counts": {
+        "WARNING: Synth 8-7129": 5,
+        "WARNING: Synth 8-7080": 1,
+        "WARNING: Synth 8-3332": 4
+      }
+    },
+    {
+      "log": "pynq_uart/pynq_uart.runs/uart_system_processing_system7_0_0_synth_1/runme.log",
+      "counts": {
+        "WARNING: Synth 8-7071": 13,
+        "WARNING: Synth 8-7023": 1,
+        "WARNING: Synth 8-7129": 100,
+        "WARNING: Synth 8-7080": 1
+      }
+    },
+    {
+      "log": "pynq_uart/pynq_uart.runs/uart_system_uart_diag_baud_core_0_0_synth_1/runme.log",
+      "counts": {
+        "WARNING: Synth 8-7129": 52,
+        "WARNING: Synth 8-7080": 1
+      }
+    }
+  ],
+  "minimum_reopen_instructions": {
+    "original_computer": "Keep all three sibling directories under Desktop/FPGA. In existing Vivado 2023.2 open pynq_uart/pynq_uart.xpr. Do not rerun historical upgrade scripts or Board Automation.",
+    "different_computer": "Install Vivado 2023.2 with xc7z020 / Zynq-7000 support; install/configure the PYNQ-Z2 board definition tul.com.tw:pynq-z2:part0:1.0, preserve all three sibling directory names, then open the XPR. Historical .runs Tcl are not a portable standalone build entry point.",
+    "board_runtime_only": "The exported stage2 bit/HWH and companion Python/Notebook run on the already configured PYNQ board; Vivado board-repository metadata on the host is not needed merely to load that overlay.",
+    "board_definition_limit": "The existing XPR still declares BOARD_PART. Without its external definition, a new machine can warn or fail while resolving board properties or regenerating runs even though the design parameters are saved. No clean-machine open or rebuild was attempted.",
+    "official_reference": "https://docs.amd.com/r/2023.2-English/ug895-vivado-system-level-design-entry/Elements-of-the-Platform-Board-Flow"
+  },
+  "packaging": {
+    "keep_three_siblings": [
+      "pynq_uart",
+      "uart_board_stage1",
+      "uart_baud_stage2"
+    ],
+    "safe_cache_candidates_in_separate_copy": [
+      "pynq_uart/pynq_uart.cache",
+      "pynq_uart/pynq_uart.hw",
+      "pynq_uart/pynq_uart.sim",
+      "Python __pycache__ and .pyc",
+      "Editor/Office transient lock files beginning ~$"
+    ],
+    "do_not_blindly_remove": [
+      "pynq_uart.gen contains the top wrapper explicitly referenced in XPR.",
+      "pynq_uart.srcs/utils_1/imports/synth_1/uart_system_wrapper.dcp is explicitly referenced as automatic incremental checkpoint.",
+      "pynq_uart.runs contains the current bit, routed checkpoints, actual reports and warning logs; preserve evidence before any removal.",
+      "uart_board_stage1/constraints/uart_rx_pmoda.xdc remains the active physical pin constraint used by stage2.",
+      "pynq_uart.ip_user_files can be regenerated but is not an unconditionally disposable input for all supplied simulation/export flows."
+    ],
+    "recommended_deadline_choice": "Keep hardware project bundle intact and clearly label the current stage2 export versus stage1 baseline, rather than aggressive size reduction."
+  },
+  "date_note": "Do not rewrite raw evidence timestamps. User has explained prior board/software records showing 2025 as unset host/board clock; Vivado reports in this package are dated 2026-10-29.",
+  "limitations": [
+    "No Vivado executable was run.",
+    "No input or submission hardware files changed.",
+    "No physical board or live UART connection tested in this review.",
+    "No clean-machine relocation/rebuild was executed.",
+    "Static artifact consistency and supplied routed reports are distinct from a newly reproduced build."
+  ]
+}

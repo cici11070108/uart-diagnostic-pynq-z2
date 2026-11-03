@@ -1,0 +1,50 @@
+UART baud stage 2 - RTL simulation results (2026-10-28)
+=====================================================
+
+Simulator: Icarus Verilog 12.0 (stable), actual compilation and execution.
+RTL Verilog-2001 compile: exit 0, no diagnostics with -Wall.
+Both SystemVerilog testbench compiles: exit 0, no diagnostics with -Wall.
+
+FIFO simulation (exit 0)
+-----------------------
+PASS uart_baud_event_fifo_tb: 20292 status checks; capacity=1024; pulse/order/ack/clear/full/overflow/wrap/error/reset/baud/readback/invalid-code/stale-event-flush
+$finish called at 202946000 (1ps)
+
+Serial integration simulation (exit 0)
+-------------------------------------
+PASS nominal baud 9600: 64 ordered bytes; one sustained-BREAK error + 55 AA; bad-stop + recovery
+PASS nominal baud 19200: 64 ordered bytes; one sustained-BREAK error + 55 AA; bad-stop + recovery
+PASS nominal baud 38400: 64 ordered bytes; one sustained-BREAK error + 55 AA; bad-stop + recovery
+PASS nominal baud 57600: 64 ordered bytes; one sustained-BREAK error + 55 AA; bad-stop + recovery
+PASS nominal baud 115200: 64 ordered bytes; one sustained-BREAK error + 55 AA; bad-stop + recovery
+PASS nominal baud 230400: 64 ordered bytes; one sustained-BREAK error + 55 AA; bad-stop + recovery
+PASS uart_diag_baud_core_tb: 410 good + 12 error events; all 6 nominal baud rates; config/clear/readback/partial-abort/invalid/reset
+$finish called at 162313946000 (1ps)
+
+Stimulus independence and scope
+------------------------------
+The serial transmitter uses bit delay 1e9/requested_baud nanoseconds, rounded
+only to the simulator's 1 ps time precision, with an asynchronous initial
+phase. It does not copy the receiver's integer cycles-per-bit divisor.
+Each baud test sends exactly one stop bit per frame without added gaps in
+its 64-byte burst. BREAK is 30 bit periods in simulation; one malformed-stop
+frame is separately tested, followed by explicit idle and recovery frames.
+The FIFO test uses a software-style circular-queue reference model and
+includes full simultaneous POP/push, dropped arrivals and sticky overflow,
+held command toggles, clears, invalid configuration codes, all six readback
+codes, resets, pointer wraps and events on both configuration/reset edges.
+
+These are digital RTL results, not board measurements. They do not establish
+Vivado synthesis/implementation success, timing closure, pin mapping, power,
+real metastability behavior, physical TX timing, or sustained Python polling
+throughput. Single-stop-bit fault injection here is simulated; the USB adapter
+board experiment previously performed used BREAK. Stage 2 board validation
+must be performed with the newly built matched .bit/.hwh pair.
+
+Reproduce with Icarus in PATH, from uart_baud_stage2
+--------------------------------------------------
+iverilog -g2001 -Wall -s uart_diag_baud_core -o core_g2001.vvp rtl/uart_diag_baud_core.v
+iverilog -g2012 -Wall -s uart_baud_event_fifo_tb -o fifo.vvp rtl/uart_diag_baud_core.v tests/uart_baud_event_fifo_tb.sv
+vvp fifo.vvp
+iverilog -g2012 -Wall -s uart_diag_baud_core_tb -o serial.vvp rtl/uart_diag_baud_core.v tests/uart_diag_baud_core_tb.sv
+vvp serial.vvp

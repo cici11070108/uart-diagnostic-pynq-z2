@@ -1,0 +1,24 @@
+UART first-board package verification, 2026-10-27
+
+RTL: actual Icarus Verilog 12.0 simulation completed successfully.
+See rtl_simulation.txt for exact output and reproduction commands.
+
+Python: 10 unittest cases executed successfully during package preparation.
+Reproduce from the package root:
+  python tests/test_uart_diag.py
+
+Covered: bounded ordered reads, delayed acknowledgements, holding a command
+without duplicate POP, initial ACK=1, error event suppresses stale data,
+overflow and clear, empty FIFO, ACK timeout and refusal to retry uncertain
+commands, signature/argument validation, and CSV unknown versus 00.
+
+Notebook: JSON parsed and every Python code cell compiled successfully.
+PC sender: --help executed; actual serial transmission is pending on user PC.
+
+Vivado Tcl/XDC: Tcl grouping/quoting completeness checked. No Vivado executable
+is available here. Actual IP creation, BD validation, synthesis, implementation,
+timing, resource use, bit/hwh export and board execution remain user-side gates.
+
+The combined UART simulation uses the frozen uploaded receiver fixture with
+CLKS_PER_BIT=868, not an unseen new revision of the user's Windows source.
+No .bit/.hwh files or claimed hardware measurements are supplied in this ZIP.

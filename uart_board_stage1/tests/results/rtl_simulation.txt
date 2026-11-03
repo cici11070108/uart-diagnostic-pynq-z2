@@ -1,0 +1,32 @@
+RTL simulation results
+======================
+
+Simulator: Icarus Verilog 12.0 (stable).
+
+Scope: digital RTL simulation only. These results do not establish Vivado
+implementation timing, actual board pin wiring, power stability, electrical
+levels, USB adapter operation, or sustained software read throughput.
+
+Verilog-2001 compile of rtl/uart_event_fifo.v: PASS (exit 0, no diagnostics).
+SystemVerilog compile of both self-checking testbenches: PASS (exit 0,
+no diagnostics with -Wall).
+
+FIFO self-checking test output (exit 0):
+PASS uart_event_fifo_tb: 20262 status checks; capacity=1024; pulse/order/ack/clear/full/overflow/wrap/error/reset
+tests/uart_event_fifo_tb.sv:203: $finish called at 202646000 (1ps)
+
+Original UART + FIFO integration test output (exit 0):
+PASS uart_rx_fifo_tb: 100 MHz/868, 64-frame contiguous burst, 66 good + 2 bad events, recovery and deferred software reads
+tests/uart_rx_fifo_tb.sv:131: $finish called at 6001347000 (1ps)
+
+Reproduce with Icarus Verilog available in PATH, from the package root:
+
+iverilog -g2001 -Wall -s uart_event_fifo -o fifo_g2001.vvp rtl/uart_event_fifo.v
+iverilog -g2012 -Wall -s uart_event_fifo_tb -o fifo.vvp rtl/uart_event_fifo.v tests/uart_event_fifo_tb.sv
+vvp fifo.vvp
+iverilog -g2012 -Wall -s uart_rx_fifo_tb -o rx_fifo.vvp rtl/uart_event_fifo.v tests/reference/uart_rx_original.v tests/uart_rx_fifo_tb.sv
+vvp rx_fifo.vvp
+
+The tests/reference/uart_rx_original.v file is a frozen simulation fixture
+from the original uploaded project. Do NOT add it to the Vivado project:
+the user's existing uart_rx.v remains the design source in Vivado.

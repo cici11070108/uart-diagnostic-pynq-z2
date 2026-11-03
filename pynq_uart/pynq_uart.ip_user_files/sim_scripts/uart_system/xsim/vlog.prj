@@ -1,0 +1,12 @@
+verilog xil_defaultlib --include "E:/vivado/2023vivado/Vivado/2023.2/data/xilinx_vip/include" --include "../../../../pynq_uart.gen/sources_1/bd/uart_system/ipshared/ec67/hdl" --include "../../../../pynq_uart.gen/sources_1/bd/uart_system/ipshared/6b2b/hdl" \
+"../../../bd/uart_system/ip/uart_system_processing_system7_0_0/sim/uart_system_processing_system7_0_0.v" \
+"../../../bd/uart_system/ip/uart_system_uart_rx_0_0/sim/uart_system_uart_rx_0_0.v" \
+"../../../bd/uart_system/ip/uart_system_xlconstant_0_0/sim/uart_system_xlconstant_0_0.v" \
+"../../../bd/uart_system/ip/uart_system_uart_event_fifo_0_0/sim/uart_system_uart_event_fifo_0_0.v" \
+"../../../bd/uart_system/ip/uart_system_auto_pc_0/sim/uart_system_auto_pc_0.v" \
+"../../../bd/uart_system/sim/uart_system.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
